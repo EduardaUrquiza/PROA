@@ -1,0 +1,12 @@
+    --------------- DICIONARIO DE DADOS - DD ---------------
+
+- É um documento para amarzenar informações sobre o conteudo, 
+formando a estrutura de um banco de dados, assim como os 
+relacionamentos entre os seus elementos. 
+
+- É importante manter um dicionario de dados para limitar 
+erross ao criar uma estrutura fisica do banco de dados no
+computador.
+
+-Tambem chamado de "Repositório de metadados"
+

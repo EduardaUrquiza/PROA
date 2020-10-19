@@ -1,0 +1,50 @@
+1.
+B)INSERT INTO brinquedo VALUES (7, 'Barco Viking', 12, 8);
+
+2.
+c) SELECT brinquedo.nome, operador.nome from agenda
+where codbrinq = codbrinq and codoper = codoper and agenda.turno = 'Tarde';
+
+3.
+d) drop table if exists agenda;
+
+4.
+e) alter table operador add salario decimal (10,2); 
+
+5.
+A) ALTER TABLE
+
+create database if not exists db_campeonato;
+
+use db_campeonato; 
+
+create table if not exists tbl_time (
+cod integer primary key auto_increment,
+nome varchar(40) not null,
+numero_de_socios integer not null
+);
+
+create table if not exists tbl_jogador (
+matricula integer primary key auto_increment, 
+nome varchar (40) not null, 
+cpf varchar (11) not null,
+cod integer,
+constraint fk_time_jogador foreign key (cod) references tbl_time (cod)
+);
+
+create table if not exists tbl_telefone (
+cod integer primary key auto_increment,
+numero varchar (9) not null,
+matricula integer,
+constraint fk_jogador_telefone foreign key (matricula) references tbl_jogador (matricula)
+); 
+
+insert into tbl_time (nome, numero_de_socios) values ("unicornio", 9); 
+
+insert into tbl_jogador(nome, cpf, cod) values ("Eduarda", "49532674375", 1);
+
+insert into tbl_telefone(numero, matricula) values ("952523069", 1);
+
+select * from tbl_time;
+select * from tbl_jogador;
+select * from tbl_telefone; 

@@ -1,0 +1,98 @@
+-- criar banco de dados
+create database db_universidade; 
+
+-- entrar no banco
+use db_universidade;
+
+-- criar tabelas 
+create table if not exists tbl_aluno (
+MAT integer primary key ,
+nome varchar(50) not null, 
+endereco varchar(100) not null, 
+cidade varchar(20) not null
+); 
+
+create table if not exists tbl_disciplina ( 
+COD_DISC varchar(3) primary key,
+nome_disc varchar(50) not null,
+carga_hor integer
+);
+
+create table if not exists tbl_professor (
+COD_PROF integer primary key,
+nome varchar(50) not null,
+endereço varchar(100) not null,
+cidade varchar(20) not null
+); 
+
+create table if not exists tbl_turma (
+COD_DISC varchar(3) not null,
+constraint fK_turma_cod foreign key (COD_DISC) references tbl_disciplina(COD_DISC),
+COD_TURMA integer not null, 
+COD_PROF integer not null,
+constraint fk_turma_prof foreign key (COD_PROF) references tbl_professor(COD_PROF),
+ANO year not null,
+horario varchar(10)
+);
+
+create table if not exists tbl_historico (
+MAT integer not null,
+constraint fk_hisotrico_mat foreign key (MAT) references tbl_aluno(MAT),
+COD_DISC varchar(3) not null,
+constraint fK_historico_disc foreign key (COD_DISC) references tbl_disciplina(COD_DISC),
+COD_TURMA integer not null,
+COD_PROF integer not null,
+constraint fk_historico_prof foreign key (COD_PROF) references tbl_professor(COD_PROF),
+ANO year not null,
+frequencia varchar(4) not null,
+nota float not null
+);
+
+-- preencher as tabelas 
+insert into tbl_aluno (MAT,nome,endereco,cidade) values (2015010101, "JOSE DE ALENCAR", "RUA DAS ALMAS", "NATAL"),
+(2015010102, "JOÃO JOSÉ", "AVENIDA RUY CARNEIRO", "JOÃO PESSOA"),
+(2015010103, "MARIA JOAQUINA", "RUA CARROSSEL", "RECIFE"),
+(2015010104, "MARIA DAS DORES", "RUA DAS LADEIRAS", "FORTALEZA"),
+(2015010105, "JOSUÉ CLAUDINO DOS SANTOS", "CENTRO", "NATAL"),
+(2015010106, "JOSUÉLISSON CLAUDINO DOS SANTOS", "CENTRO", "NATAL");
+
+insert into tbl_disciplina values ("BD", "BANCO DE DADOS", 100),
+("POO", "PROGRAMAÇÃO COM ACESSO A BANCO DE DADOS", 100),
+("WEB", "AUTORIA WEB", 50),
+("ENG", "ENGENHARIA DE SOFTWARE", 80);
+
+insert into tbl_professor values (212131," NICKERSON FERREIRA", "RUA MANAÍRA", "JOÃO PESSOA"),
+(122135, "ADORILSON BEZERRA", "AVENIDA SALGADO FILHO", "NATAL"),
+(192011, "DIEGO OLIVEIRA"," AVENIDA ROBERTO FREIRE", "NATAL");
+
+insert into tbl_turma values ("BD", 1, 212131, 2015, "11H-12H"),
+("BD", 2, 212131, 2015, "13H-14H"),
+("POO", 1, 192011, 2015, "08H-09H"),
+("WEB", 1, 192011, 2015, "07H-08H"),
+("ENG", 1, 122135, 2015, "10H-11H");
+
+insert into tbl_historico values (2015010101, "BD", 1 , 212131, 2015, "94%", "9.7"),
+(2015010102, "POO", 1 , 192011, 2015, "80%", "8.0"),
+(2015010103, "WEB", 1 , 192011, 2015, "98%", "7.25"),
+(2015010104, "ENG", 1 , 122135, 2015, "78%", "8.75"),
+(2015010105, "POO", 1 , 192011, 2015, "64%", "5.25"),
+(2015010106, "BD", 2 , 212131, 2015,  "50%", "4.5"); 
+
+-- conferindo os valores 
+select * from tbl_aluno;
+select * from tbl_disciplina; 
+select * from tbl_historico;
+select * from tbl_professor;
+select * from tbl_turma; 
+
+-- A 
+select MAT , COD_DISC, nota from tbl_historico where nota <= 5 ;  
+
+-- B 
+select MAT, COD_DISC, avg(nota) from tbl_historico where COD_DISC = "POO"; 
+
+-- C 
+select MAT, COD_DISC, avg(nota) from tbl_historico where COD_DISC = "POO"; 
+
+-- D 
+select * from tbl_aluno where cidade != "Natal"; 

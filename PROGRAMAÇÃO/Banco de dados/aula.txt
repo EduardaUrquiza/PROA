@@ -1,0 +1,92 @@
+Mateus Wengler14:24
+https://www.luis.blog.br/modelagem-de-dados-modelo-conceitual-modelo-logico-e-fisico.html
+Alana Charlo de Oliveira14:25
+Dados -> Os dados são constatações, um conteúdo quantificado. 
+
+Informação -> Organiza e ordena os dados.
+Iago Franco14:26
+https://dicasdeprogramacao.com.br/o-que-e-um-banco-de-dados/
+biel14:32
+HTTPS://rockcontent.com/br/blog/banco-de-dados/
+Iago Franco14:33
+https://www.lucidchart.com/pages/pt/o-que-e-um-modelo-de-banco-de-dados
+biel14:50
+Eae galerinha
+Oq vcs entenderam?
+Mateus Wengler14:51
+- Modelagem de Dados:
+> Técnica utilizada para criar um modelo que explique as características de funcionamento e comportamento de um software a partir do qual ele será criado:
+-> Ou seja, é um modo de planejar a construção do software;
+-> Modelar dados: desenhar o sistema de informações, concentrando-se nas entidades lógicas e nas dependências lógicas entre essas entidades.
+> Importância:
+-> Cria estruturas no sistema de armazenamento de forma a possibilitar o encaixe e o resgate de informações
+Alana Charlo de Oliveira14:51
+Dados -> Os dados são constatações, um conteúdo quantificado. 
+
+Informação -> Organiza e ordena os dados.
+(https://www.unilab.com.br/materiais-educativos/artigos/gestao/diferenca-entre-dados-e-informacao/)
+Banco de Dados -> Organização e armazenagem de informações sobre um domínio específico. (https://rockcontent.com/br/blog/banco-de-dados/)
+
+Armazanemento de Dados (Hierárquico) -> Uma abordagem que define diferentes níveis de armazenamento de ativos corporativos. O objetivo é reduzir os custos totais e reforçar a segurança em dados críticos das empresas.
+(Em rede) -> Funciona por meio de servidores dedicados que armazenam os dados compartilhados com vários clientes que estão conectados em uma rede.
+(Relacional) -> Armazena e fornece acesso á pontos de dados relacionados entre si.
+(Não-Relacional) -> Armazena dados de relacionamento, mas de maneira diferente dos BD Relacionais. 
+
+Modelagem de dados (O que é) -> Ato exploratório dos dados sobre pessoas e processos.                          
+		   (Importância) -> É uma habilidade que parte da capacitação do profissional que lida com dados. 
+SGBD -> Conjunto de programas de computador responsáveis pelo gerenciamento de uma base de dados. 
+Alana Charlo de Oliveira14:52
+Principais SGBD -> MySQL, OracleDB, SQLServer, MariaBD e PostgreSQL.
+biel14:52
+Si
+Mateus Wengler15:12
+> Dados: são números, medidas ou valores que sozinhos não transmitem nenhum conhecimento.
+-> Isto é: conteúdo quantificável que, por si só, não transmite uma mensagem que possibilite o entendimento de determinada situação.
+biel15:16
+bancos de dados não relacionais são responsáveis por atender a demandas que os bancos relacionais não conseguem suprir. Um exemplo de demandas são aqueles dados mistos, onde se misturam tabelas, imagens e mapas, por exemplo, que não poderão ser tabulados em colunas e linhas de tabela.
+
+Suas soluções são baseadas em armazenamento na nuvem. A linguagem utilizada nesse formato é NoSQL, Not Only SQL. 
+Mateus Wengler15:18
+> Informação: ordenação e organização dos dados de forma que passa a transmitir uma mensagem compreensiva dentro de certo contexto.
+-> Conjunto de dados que transmite conhecimento = informação;
+-> A transformação ocorre por um processamento do dado, gerando o seu menor nível de abstração.
+> Definição: estrutura de dados organizada que permite a extração de informações.
+Anna Clara Salomão Pereira15:19
+•	O que é um Banco de Dados?
+-- Agrupamento de dados que tratam do mesmo assunto, e que precisam ser armazenados para segurança ou conferência futura.
+eu pesquisei isso
+Laura15:21
+Unica parte que consegui pesquisar direito foi o que é SGBD
+Mateus Wengler15:25
+- Modelagem de Dados:
+> Técnica utilizada para criar um modelo que explique as características de funcionamento e comportamento de um software a partir do qual ele será criado:
+-> Ou seja, é um modo de planejar a construção do software;
+-> Modelar dados: desenhar o sistema de informações, concentrando-se nas entidades lógicas e nas dependências lógicas entre essas entidades.
+> Importância:
+-> Cria estruturas no sistema de armazenamento de forma a possibilitar o encaixe e o resgate de informações
+Mateus Wengler15:27
+- SGBD:
+> Sistemas de Gerenciamento de Bancos de Dados: ou DBMS, em inglês DataBase Management System.
+> Definição: é um conjunto de softwares responsáveis pelo gerenciamento de uma base de dados - controlam, organizam, acessam e protegem as informações de uma empresa.
+> Funções:
+-> Salva os dados no HD, mantém em memória os dados mais acessados, encripta dados, controla o acesso a informações, mantém cópias dos dados para recuperação de uma possível falha, etc.
+> Principais SGBDs do mercado:
+-> SGBD Oracle: relacional;
+-> SGBD MySQL;
+-> SQL Server;
+-> PostgreSQL.
+Laura15:27
+Basicamente, um SGBD é uma estrutura de software que permite que dados sejam armazenados, organizados, protegidos, atualizados, acrescentados, excluídos e acessados sempre que necessário, devendo corresponder à demanda que a aplicação que o utiliza exige. Por questões de praticidade, convencionou-se chamar os SGBDs simplesmente de: bancos de dados
+os sistemas de gerenciamento de dados mais conhecidos são:
+Oracle, MySQL, Microsoft SQL Server.
+Mateus Wengler15:30
+https://becode.com.br/principais-sgbds/
+Você15:32
+no meu caso eu to com dificuldade em tudo 
+Você16:01
+calma ai que to comendo 
+Mateus Wengler16:02
+tá tudo travado, aqui, calma ae
+Você16:02
+eu to comendo 
+mds

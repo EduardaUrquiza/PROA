@@ -1,0 +1,31 @@
+-- create database db_loja;
+-- use db_loja; 
+/*
+create table tbl_pessoa (
+id_pessoa integer primary key auto_increment,
+nome varchar(100) not null,
+datanasc date not null,
+rua varchar(80) not null,
+bairro varchar(30) not null,
+cidade varchar(40) not null,
+uf varchar(2) not null
+);
+*/
+ /*
+ insert into tbl_pessoa(nome, datanasc, rua, bairro, cidade, uf) 
+ values("Helio", "2001-11-21", "Estrada M. Boi Mirim,100", "Socorro", "São Paulo", "SP" ),
+ ("Isabela", "2002-05-01", "Av. Morumbi,855", "Morumbi", "São Paulo", "SP");
+ */
+ -- select * from tbl_pessoa;
+ /*
+ create table tbl_carro (
+ id_carro integer auto_increment primary key,
+ modelo varchar(20) not null,
+ano year not null,
+marca varchar(50) not null,
+cor varchar(20) not null,
+placa varchar(7) not null,
+id_pessoa integer not null,
+constraint fk_pessoa_carro foreign key (id_pessoa) references tbl_pessoa (id_pessoa) 
+);
+*/

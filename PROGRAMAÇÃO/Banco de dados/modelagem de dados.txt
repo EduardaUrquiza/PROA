@@ -1,0 +1,55 @@
+--- O QUE É MODELAGEM DE DATOS E QUAL É A SUA IMPORTANCIA? ----
+
+Modelagem de dados é o ato exploratorio dos dados coletados sobre 
+pessoas e processos. Consiste em criar estruturas no sistema de 
+armazenamento para possibilitar a associação e o resgate de 
+infomações em um determinado padrão e momento.
+É essencial no desenvolvimento de softwares, pois permite a integração
+de banco de dados por sistemas independentes.
+
+--- COMO FUNCIONA A MODELAGEM DE DADOS?----
+
+Indentificar as entidades e atributos dos dados
+Aplicar uma conversação de nomes para padronizar ou hierarquizar 
+os dados
+Associa chaves para serem requisitados com mais facilidade
+Normaliza o banco para reduzir a redundância dos dados
+Diversifica os dados para melhorar o desempenho
+
+Modelagem transacional tem foco nas informaçoes provenientes de 
+interações de um sistema e suas fontes de dados, OLTP (Online
+Transactins Processing)
+
+Modelagem informacional, chamada de dimensional, viabiliza a tomada
+de decisão e por isso se baseia em grandes volumes de dados, 
+inclusive série historica, OLAP (Oline Analytical Procesing).
+
+--- USANDO NA PRATICA ---
+
+Modelo de dados conceitual 
+
+ Chamado de modelos de domínio, são criados para entendimento dos 
+requisitos do sistema, pois exploram as estruturas e conceitos do 
+negócio. São percusores do modelos a seguir.
+
+Modelo Lógico de dados (MLDs)
+
+ É usado para explorar os conceitos do somínio. Descreve as entidades
+lógicas, a forma descritiva de seus atributos e a relação entre elas.
+MLDs são boas esolhar para projetos como um Data Warehose ou um sistema
+de gestão baseado em relatório. 
+
+Modelo físico de dados (MFDs)
+
+é usado para projetar o esquema interno do bando de dados, descreve as
+rabelas, suas colunas e o relacionamento estabelecido entre elas. 
+Sua implementação acontece por meio de linguagem DQL, específica para
+a criação dp banco de dados. Dessa forma, a propria tecnologia utilizada
+no projeto age de forma independente, uma vez que todas as regras ja foram
+estabelecidas.
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+create database db_biblioteca;
+
+use db_biblioteca; 
+
+create table tbl_autor(
+id_autor integer auto_increment primary key,
+sobrenome varchar(100) not null,
+nome varchar(30)
+);
+
+create table tbl_editora(
+id_editora integer auto_increment primary key,
+nome varchar(50) not null
+);
+
+create table tbl_categoria(
+id_categoria integer auto_increment primary key
+);
+
+create table tbl_livro(
+id_livro integer auto_increment primary key, 
+nome varchar(50) not null,
+data_publicacao date not null, 
+isbn varchar(10) not null,
+numero_paginas varchar(10) not null,
+id_editora integer not null,
+preco_livro decimal not null,
+ constraint fk_livro_editora foreign key (id_editora) references tbl_editora (id_editora),
+id_autor integer not null,
+   constraint fk_livro_autor foreign key (id_autor) references tbl_autor (id_autor),
+id_categoria integer not null,
+  constraint fk_livro_categoria foreign key (id_categoria) references tbl_categoria(id_categoria)
+);
+
+alter table tbl_categoria add nome varchar(50) after id_categoria; 
+
+alter table tbl_livro
+modify column isbn varchar(20) not null;
+
+insert into tbl_autor(sobrenome, nome) values ("MAURO DE VASCONCELOS", " José");
+insert into tbl_autor(sobrenome, nome) values ("DE ASSIS", "Machado");
+insert into tbl_autor(sobrenome, nome) values ( "FRANK", "Anne");
+
+select * from tbl_autor;
+
+insert into tbl_categoria(nome) values ("Romance juvenil");
+insert into tbl_categoria(nome) values ("Romance imprecionista");
+insert into tbl_categoria(nome) values ("Bibliografia");
+
+select * from tbl_categoria;
+
+insert into tbl_editora(nome) values ("Melhoramentos");
+insert into tbl_editora(nome) values ("Livraria Garnier");
+insert into tbl_editora(nome) values (" Contact Publishing");
+
+select * from tbl_editora;
+
+alter table tbl_livro
+modify column data_publicacao year not null;
+
+alter table tbl_livro
+modify column preco_livro float not null;
+
+insert into tbl_livro(nome, data_publicacao, isbn, numero_paginas, id_editora, preco_livro, id_autor, id_categoria)
+values ("Meu pé de laranja lima", "1968","978-972-8202-29-3", "193",1,19,1,1);
+insert into tbl_livro(nome, data_publicacao, isbn, numero_paginas, id_editora, preco_livro, id_autor, id_categoria)
+values ("Dom Casmurro", "1968","849-443-332-345-23", "1899",2,20.67,2,2);
+insert into tbl_livro(nome, data_publicacao, isbn, numero_paginas, id_editora, preco_livro, id_autor, id_categoria)
+values ("O diario de Anne Frenk", "1947","345-654-234-56", "342",3,78.4,3,2);
+
+select * from tbl_livro;
