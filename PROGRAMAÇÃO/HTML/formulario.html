@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action="#" method="GET" >
+<!-- Proocolo http - MÈTODO GET: informações vão pela URL - mais rápido, porém menos seguro
+    / MÈTODO POST: informações vão encapsuladas (empacotadas) no body - mais lento e mais seguro-->
+   
+    <p>
+        <label for="nome">Nome</label>
+        <input type="text" maxlenght="60" minlenght="10" 
+        placeholder="Digite seu nome" id="nome" name="nome">
+    </p>
+     <!-- for = relaciona com o  id / placeholder = acessibilidade / max.mim lengeht = max e o min de caracter-->
+    <p>
+        <label for="idade">Idade</label>
+        <input type="Number" id="idade" min="18" max="60" placeholder="Digite a sua Idade" name="idade">
+    </p>
+    
+    <p>
+       <label for="nascimento">Nascimento</label> 
+        <input type="date" id="nascimento" name="nascimento">
+        <label for="horaNascimento">hora</label>
+        <input type="time" id="horaNascimento">
+    </p>
+    
+    <p>
+        <label for="sexo">Sexo</label>
+         <select name="Sexo" id="sexo"> <!-- Selecionar uma opção -->
+            <option value="" selected>escolha um sexo</option> <!-- opções -->
+            <option value="f" selected>feminino</option>
+            <option value="m" selected>masculino</option>
+         </select>   
+    </p>
+
+    <p>
+        <label for="senha">cadestre uma Senha</label>
+        <input type="password" id="senha" minlength="3" maxlength="6"
+        name="senha">
+    </p>
+    
+    <p>
+        <label for="confirmasenha">confirmar Senha</label>
+        <input type="password" name="confirmasenha" id="confirmasenha">
+    </p>
+    
+    <p>
+        <label for="Observação">Observação</label>
+        <textarea name="Observação" id="observação" cols="30" 
+        rows="10" maxlenght="100"></textarea>
+    </p>
+    <!-- cols = coluna / rows = linhas -->
+    <p>
+        <fieldset>
+        <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="fem" value="f">masculino
+            <input type="radio" name="sexo" id="mas" value="m">feminino
+            <input type="radio" name="sexo" id="out" value="o">não declarar
+        </p>
+        </fieldset>
+        
+        <p>    
+            <input type="checkbox" name="Vale Transporte" id="" value="vt"> Vale Transporte
+            <br>
+            <input type="checkbox" name="Vale Refeição" id="" value="vr"> Vale Refeição
+            <br>
+            <input type="checkbox" name="Convênio Médico" id="" value="cm"> Convênio médico
+            <br>
+            <input type="checkbox" name="Convênio Odontologico" id="" value="co"> Convênio Odontologico 
+            
+        </p>
+    
+        <p>
+            <input type="Submit" name="" id="" value="Enviar">
+            <input type="Reset" name="" id="" vallue= "Apagar">
+        </p>
+
+    </form>
+    
+</body>
+</html>
